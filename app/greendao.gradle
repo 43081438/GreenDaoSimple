@@ -1,0 +1,14 @@
+//FIXME Open until database upgrade next time.
+def greenDaoEnable = true
+if (greenDaoEnable) {
+    apply plugin: 'org.greenrobot.greendao'
+    //greendao配置
+    greendao {
+        /**GreenDao 实体类包所在文件夹*/
+        targetGenDir 'src/main/java'
+        /**版本号，升级时可配置*/
+        schemaVersion 1
+        /**GreenDao输出dao数据库操作类实体类所在文件夹*/
+        daoPackage 'qzy.greendao.com.greendaosimple.dao'
+    }
+}
